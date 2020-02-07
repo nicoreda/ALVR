@@ -170,7 +170,7 @@ void OvrDirectModeComponent::SubmitLayer(const SubmitLayerPerEye_t(&perEye)[2], 
 		// We search for history of TrackingInfo and find the TrackingInfo which have nearest matrix value.
 
 		m_poseMutex.Wait(INFINITE);
-		float minDiff = 100000;
+		float minDiff = 40000;
 		int index = 0;
 		int minIndex = 0;
 		auto minIt = m_poseBuffer.begin();
@@ -335,7 +335,7 @@ void OvrDirectModeComponent::CopyTexture(uint32_t layerCount) {
 	}
 
 	// This can go away, but is useful to see it as a separate packet on the gpu in traces.
-	m_pD3DRender->GetContext()->Flush();
+	//m_pD3DRender->GetContext()->Flush();
 
 	Log(L"Waiting for finish of previous encode.");
 
@@ -361,7 +361,7 @@ void OvrDirectModeComponent::CopyTexture(uint32_t layerCount) {
 		TrackingInfo info;
 		m_Listener->GetTrackingInfo(info);
 
-		char buf[2000];
+		char buf[4000];
 		snprintf(buf, sizeof(buf), "%llu\n%f\n%f", m_prevSubmitFrameIndex, m_prevFramePoseRotation.x, info.HeadPose_Pose_Orientation.x);
 		debugText = buf;
 	}

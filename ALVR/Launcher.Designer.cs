@@ -580,7 +580,7 @@
             this.noClientLabel.Name = "noClientLabel";
             this.noClientLabel.Size = new System.Drawing.Size(211, 95);
             this.noClientLabel.TabIndex = 10;
-            this.noClientLabel.Text = "Headset not found.\r\n\r\nMake sure the client is launched.\r\nOr check the firewall se" +
+            this.noClientLabel.Text = "Nicoreda.\r\n\r\nMake sure the client is launched.\r\nOr check the firewall se" +
     "ttings\r\n(permit UDP/9943 and UDP/9944).";
             this.noClientLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1739,7 +1739,7 @@
             this.metroLabel33.Name = "metroLabel33";
             this.metroLabel33.Size = new System.Drawing.Size(68, 19);
             this.metroLabel33.TabIndex = 47;
-            this.metroLabel33.Text = "Saturation";
+            this.metroLabel33.Text = "Sharpening";
             // 
             // flowLayoutPanel30
             // 
@@ -2391,7 +2391,7 @@
             131072});
             this.saturationBox.Location = new System.Drawing.Point(75, 3);
             this.saturationBox.Maximum = new decimal(new int[] {
-            1,
+            4,
             0,
             0,
             0});
@@ -2577,7 +2577,7 @@
             this.force60HzCheckBox.Name = "force60HzCheckBox";
             this.force60HzCheckBox.Size = new System.Drawing.Size(81, 15);
             this.force60HzCheckBox.TabIndex = 31;
-            this.force60HzCheckBox.Text = "Force 60Hz";
+            this.force60HzCheckBox.Text = "Force 50Hz";
             this.force60HzCheckBox.UseVisualStyleBackColor = true;
             // 
             // suppressFrameDropCheckBox

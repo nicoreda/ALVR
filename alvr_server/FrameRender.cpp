@@ -317,6 +317,7 @@ bool FrameRender::Startup()
 			float contrast;
 			float saturation;
 			float gamma;
+
 		};
 		ColorCorrection colorCorrectionStruct = { Settings::Instance().m_brightness, Settings::Instance().m_contrast + 1.f,
 												  Settings::Instance().m_saturation + 1.f, Settings::Instance().m_gamma };

@@ -19,7 +19,7 @@ namespace ALVR
         public static readonly int DEFAULT_SCALE_INDEX = 3; // 100%
         public static readonly int[] supportedScales = { 25, 50, 75, 100, 125, 150, 175, 200 };
 
-        public static readonly int DEFAULT_REFRESHRATE = 72;
+        public static readonly int DEFAULT_REFRESHRATE = 144;
         public static readonly int DEFAULT_WIDTH = 2432;
         public static readonly int DEFAULT_HEIGHT = 1344;
 
@@ -148,7 +148,7 @@ namespace ALVR
                     driverConfig.autoConnectHost = "";
                     driverConfig.autoConnectPort = 0;
 
-                    driverConfig.eyeFov = new double[] { 45, 45, 45, 45, 45, 45, 45, 45 };
+                    driverConfig.eyeFov = new double[] { 50, 50, 50, 50, 50, 50, 50, 50 };
                 }
                 else
                 {
@@ -156,7 +156,7 @@ namespace ALVR
                     driverConfig.refreshRate = device.RefreshRates[0] == 0 ? DEFAULT_REFRESHRATE : device.RefreshRates[0];
                     if(c.force60Hz)
                     {
-                        driverConfig.refreshRate = 60;
+                        driverConfig.refreshRate = 50;
                     }
                     driverConfig.renderWidth = device.DefaultWidth * c.resolutionScale / 100;
                     driverConfig.renderHeight = device.DefaultHeight * c.resolutionScale / 100;
@@ -193,13 +193,13 @@ namespace ALVR
 
 
                
-                driverConfig.controllerTrackingSystemName = "htc";
+                driverConfig.controllerTrackingSystemName = "oculus";
                 driverConfig.controllerSerialNumber = "1WMGH000XX0000_Controller"; //requires _Left & _Right
                 driverConfig.controllerModelNumber = "HTC Vive"; //requires (Left Controller) & (Right Controller)
-                driverConfig.controllerManufacturerName = "HTC";
-                driverConfig.controllerRenderModelNameLeft = "vr_controller_vive_1_5";
-                driverConfig.controllerRenderModelNameRight = "vr_controller_vive_1_5";
-                driverConfig.controllerRegisteredDeviceType = "vive_controller"; //requires _Left & _Right
+                driverConfig.controllerManufacturerName = "Oculus Rift S";
+                driverConfig.controllerRenderModelNameLeft = "oculus_rifts_controller_left";
+                driverConfig.controllerRenderModelNameRight = "oculus_rifts_controller_right";
+                driverConfig.controllerRegisteredDeviceType = "oculus/1WMGH000XX0000_Controller"; //requires _Left & _Right
                 driverConfig.controllerInputProfilePath = "{oculus}/input/touch_profile.json";
                 driverConfig.controllerType = "oculus_touch";
                
